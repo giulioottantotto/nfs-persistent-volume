@@ -1,0 +1,14 @@
+---
+ apiVersion: v1
+ kind: PersistentVolume
+ metadata:
+   name: volume-persistente
+ spec:
+   capacity:
+     storage: 1Gi
+   accessModes:
+     - ReadWriteMany
+   nfs:
+     path: /Users/giuliomandic/NFS-share
+     server: 192.168.99.1
+   persistentVolumeReclaimPolicy: Retain
